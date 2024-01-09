@@ -157,16 +157,21 @@ def sgp_compute(X, Y, sparse_method, inducing_method, M):
     return res
 
 
-def save_results(results):
+def save_results(results, M):
     if results:
         fields = results[0].keys()
-        with open("sgp_wtdata_results.csv", "w", newline="") as file:
+        with open(f"sgp_wtdata_results_M{M}.csv", "w", newline="") as file:
             writer = csv.DictWriter(file, delimiter=";", fieldnames=fields)
             writer.writeheader()
             writer.writerows(results)
 
 
 if __name__ == "__main__":
+    from optparse import OptionParser
+    usage = "usage: %prog [options]"
+    parser = OptionParser()
+    parser.add_option("-M", type="int", dest="M")
+
     start = time.time()
     print("Loading data...")
     df = load_database()
@@ -175,7 +180,11 @@ if __name__ == "__main__":
 
     print("Computing...")
     start = time.time()
+
     M = 50
+    (options, args) = parser.parse_args()
+    if options.M:
+        M = options.M
 
     results = []
 
@@ -192,8 +201,8 @@ if __name__ == "__main__":
                 results.append(res)
 
                 # save intermediate results
-                save_results(results)
+                save_results(results, M)
 
     elapsed = time.time() - start
     print("Computation in {:.2f}s".format(time.time() - start))
-    save_results(results)
+    save_results(results, M)
