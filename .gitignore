@@ -1,6 +1,4 @@
 .ipynb_checkpoints/
 conf.npz
 database.db
-sgp_wtdata_results*
-*.ipynb
 
