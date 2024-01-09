@@ -71,7 +71,7 @@ def load_database():
     return df
 
 
-def sgp_compute(X, Y, sparse_method, inducing_method, M):
+def sgp_compute(X, Y, output_name, sparse_method, inducing_method, M):
     N = int(0.9 * X.shape[0])
     random_idx = np.random.choice(X.shape[0], N, replace=False)
     X_train = X[random_idx]
@@ -196,7 +196,7 @@ if __name__ == "__main__":
                 print(
                     f"*** {output_name} - {sparse_method} - {inducing_method} ******************"
                 )
-                res = sgp_compute(X, Y, sparse_method, inducing_method, M)
+                res = sgp_compute(X, Y, output_name, sparse_method, inducing_method, M)
                 print(res)
                 results.append(res)
 
