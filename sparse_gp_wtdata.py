@@ -161,7 +161,7 @@ def save_results(results, M):
     if results:
         fields = results[0].keys()
         with open(f"sgp_wtdata_results_M{M}.csv", "w", newline="") as file:
-            writer = csv.DictWriter(file, delimiter=";", fieldnames=fields)
+            writer = csv.DictWriter(file, delimiter=",", fieldnames=fields)
             writer.writeheader()
             writer.writerows(results)
 
