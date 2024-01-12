@@ -147,7 +147,7 @@ def sgp_compute(X, Y, output_name, sparse_method, inducing_method, M):
         "optimal_theta": sm.optimal_theta,
         "gp_variance": sm.optimal_sigma2,
         "noise_variance": sm.optimal_noise,
-        "reduced_loglikelihood": sm.optimal_rlf_value,
+        "reduced_loglikelihood": float(sm.optimal_rlf_value),
         "output_name": output_name,
         "sparse_method": sparse_method,
         "inducing_method": inducing_method,
