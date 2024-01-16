@@ -16,9 +16,6 @@ import pandas as pd
 # Sparse GP regression model
 from smt.surrogate_models import SGP
 
-# Set seed
-np.random.seed(0)
-
 # defining global names
 LABEL_NAMES = ["campaign_id", "NROT", "NLOT", "CONF"]  # names of some labels
 INPUT_NAMES = ["M0C", "RE0C", "ALPHAC", "BETA"]  # names of the inputs
@@ -168,9 +165,13 @@ def save_results(results, M):
 
 if __name__ == "__main__":
     from optparse import OptionParser
+
     usage = "usage: %prog [options]"
     parser = OptionParser()
     parser.add_option("-M", type="int", dest="M")
+
+    # Set seed
+    np.random.seed(0)
 
     start = time.time()
     print("Loading data...")

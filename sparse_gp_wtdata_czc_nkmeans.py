@@ -15,9 +15,10 @@ def save_czc_nkmeans_results(results):
     if results:
         fields = results[0].keys()
         with open(f"sgp_wtdata_results_czc_nkmeans.csv", "w", newline="") as file:
-            writer = csv.DictWriter(file, delimiter=";", fieldnames=fields)
+            writer = csv.DictWriter(file, delimiter=",", fieldnames=fields)
             writer.writeheader()
             writer.writerows(results)
+
 
 if __name__ == "__main__":
     start = time.time()
@@ -25,6 +26,9 @@ if __name__ == "__main__":
     df = load_database()
     X = np.array(df[INPUT_NAMES])
     print("Data loaded in {:.2f}s".format(time.time() - start))
+
+    # Set seed
+    np.random.seed(0)
 
     print("Computing...")
     start = time.time()
