@@ -4,7 +4,7 @@ Repo related to the paper 'A Python Toolbox for Data-Driven Aerodynamic Modeling
 
 * Notebooks
   * Analytic test case : `sparse_gp_analytic.ipynb`
-  * Wind Tunnel test case: `sparse_gp_wtdata.ipynb`
+  * Wind Tunnel test case: `sparse_gp_wtdata.ipynb`  (Warning: wind tunnel data are not publicly available)
 
 * `FIG_ANALYTIC` directory contains figures generated from analytic test case notebook
 * `FIG_WT` directory contains figures generated from wind tunnel test case notebook
@@ -12,4 +12,4 @@ Repo related to the paper 'A Python Toolbox for Data-Driven Aerodynamic Modeling
  
 * `sparse_gp_wtdata.py` generates `sgp_wtdata_results_M\<value\>.csv` and deals with all output variable, all sparse methods, all inducing methods for a given M nb of inducing points
 * `sparse_gp_wtdata_czc_nkmeans.py` generates `sgp_wtdata_results_czc_nkmeans.csv` and deals with the CZC output variable, normalized kmeans and various M values
-* `sparse_gp_wdata_noseed_10times.py` generates `sgp_wtdata_results_noseed_M50_10times.csv` and deals with all output variable, all sparse methods, all inducing methods by repeating ten times with no random seed 
+* `sparse_gp_wtdata_noseed_10times.py` generates `sgp_wtdata_results_noseed_M50_10times.csv` and deals with all output variable, all sparse methods, all inducing methods by repeating ten times with no random seed 
