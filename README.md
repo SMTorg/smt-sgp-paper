@@ -1,6 +1,11 @@
 # smt-sgp-paper
 
-Repo related to the paper 'A Python Toolbox for Data-Driven Aerodynamic Modeling using Sparse Gaussian Processes'
+Repo related to the paper ['A Python Toolbox for Data-Driven Aerodynamic Modeling using Sparse Gaussian Processes'](https://www.mdpi.com/2226-4310/11/4/260)
+
+## Citation
+> Valayer, H.; Bartoli, N.; Castaño-Aguirre, M.; Lafage, R.; Lefebvre, T.; López-Lopera, A.F.; Mouton, S. A Python Toolbox for Data-Driven Aerodynamic Modeling Using Sparse Gaussian Processes. Aerospace 2024, 11, 260. https://doi.org/10.3390/aerospace11040260
+
+## Repository Content
 
 * Notebooks
   * Analytic test case : `sparse_gp_analytic.ipynb`
