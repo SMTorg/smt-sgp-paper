@@ -5,6 +5,13 @@ Repo related to the paper ['A Python Toolbox for Data-Driven Aerodynamic Modelin
 ## Citation
 > Valayer, H.; Bartoli, N.; Castaño-Aguirre, M.; Lafage, R.; Lefebvre, T.; López-Lopera, A.F.; Mouton, S. A Python Toolbox for Data-Driven Aerodynamic Modeling Using Sparse Gaussian Processes. Aerospace 2024, 11, 260. https://doi.org/10.3390/aerospace11040260
 
+## SMT version
+
+**SMT 2.3.0** was used to get the results.
+
+```bash
+pip install smt==2.3.0 
+```
 ## Repository Content
 
 * Notebooks
